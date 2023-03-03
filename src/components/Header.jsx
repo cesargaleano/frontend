@@ -4,9 +4,12 @@ import About from './About';
 
 const Header = () => {
   return (
-    <h3 className='Header-title'>
-      <About />
-    </h3>
+    <div className='Header-container'>
+      <h3 className='Header-title'>
+        <About />
+      </h3>
+      
+    </div>
   );
 };
 
