@@ -1,32 +1,25 @@
 import React from 'react';
 import '../styles/components/Interest.styl';
 
-const interestData = [
-  'javascript',
-  'develop',
-  'backend',
-  'frontend',
-];
+const InterestItem = ({ interestItem = '' }) => {
 
-const InterestItem = ({ interestData }) => {
-  console.log(interestData);
-  
   return (
     <div className='Interest-item'>
-      <h4 className='Interest-item-title'>{interestData}</h4>
+      <h4 className='Interest-item-title'>{interestItem}</h4>
     </div>
   );
 };
 
-const Interest = () => {
+const Interest = ({ interestInfo = [] }) => {
+  console.log(interestInfo);
   return (
     <div className='Interest-container'>
       <h3 className='Interest-title'>INTEREST</h3>
       <div className='Interest-items'>
-        <InterestItem interestData={interestData[0]} />
-        <InterestItem interestData={interestData[1]} />
-        <InterestItem interestData={interestData[2]} />
-        <InterestItem interestData={interestData[3]} />
+        <InterestItem interestItem={interestInfo ? interestInfo[0] : ''} />
+        <InterestItem interestItem={interestInfo ? interestInfo[1] : ''} />
+        <InterestItem interestItem={interestInfo ? interestInfo[2] : ''} />
+        <InterestItem interestItem={interestInfo ? interestInfo[3] : ''} />
       </div>
     </div>
   );
