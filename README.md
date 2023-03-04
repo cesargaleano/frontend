@@ -77,9 +77,10 @@ Crear tu curriculum vitae en React, analiza la estructura propuesta e inspirate 
     ```
 
     A continuacion se muestra la foto de la respuesta del servidor cuando se le realiza una peticion get:
-    
+
      
      ![servidor-vercel](https://res.cloudinary.com/dvbadp1mn/image/upload/v1677916926/Profile/servidor_figqfo.png)
+
 
 6. [Documentar](https://github.com/platzimaster/frontend/issues/6)
 
