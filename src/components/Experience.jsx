@@ -20,10 +20,10 @@ const Experience = ({ experienceInfo = [] }) => {
       <h3 className='Experience-title'>EXPERIENCE</h3>
       <div className='Experience-items'>
         <ExperienceItem experienceItem={experienceInfo ? experienceInfo[0] : {}} />
-        <ExperienceItem experienceItem={experienceInfo ? experienceInfo[0] : {}} />
+        <ExperienceItem experienceItem={experienceInfo ? experienceInfo[1] : {}} />
       </div>
       <div className='Experience-items'>
-        <ExperienceItem experienceItem={experienceInfo ? experienceInfo[0] : {}} />
+        <ExperienceItem experienceItem={experienceInfo ? experienceInfo[2] : {}} />
       </div>
     </div>
   );

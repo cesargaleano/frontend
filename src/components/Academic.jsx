@@ -19,7 +19,7 @@ const Academic = ({ academicInfo = [] }) => {
       <div className='Academic-items'>
         <AcademicItem academicItem={academicInfo ? academicInfo[0] : {}} />
         <AcademicItem academicItem={academicInfo ? academicInfo[1] : {}} />
-        <AcademicItem academicItem={academicInfo ? academicInfo[1] : {}} />
+        <AcademicItem academicItem={academicInfo ? academicInfo[2] : {}} />
       </div>
     </div>
   );
