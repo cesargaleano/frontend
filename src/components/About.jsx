@@ -2,6 +2,7 @@ import React from 'react';
 import '../styles/components/About.styl';
 
 const About = ({ cvInfo = {} }) => {
+  console.log(cvInfo);
   const { name, profession, address, email, website, phone, avatar } = cvInfo;
   return (
     <div className='About-container'>

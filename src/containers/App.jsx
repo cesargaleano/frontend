@@ -13,22 +13,24 @@ const App = () => {
   const [cvInfo, setCvInfo] = useState({});
 
   useEffect(() => {
-    getData('http://localhost:3000/data').then(data => setCvInfo(data));
-
+    getData('https://server-platzi-k9pm15wff-cesargaleano.vercel.app/data').then(data => setCvInfo(data));
+    
+    
+    return (() => console.log(cvInfo));
   }, []);
 
   return (
     <div className='general-container'>
       <Header cvInfo={cvInfo} />
       <Profile cvInfo={cvInfo} />
-      <Experience experienceInfo={cvInfo.experience} />
+      <Experience experienceInfo={cvInfo?.experience} />
       <div className='app-item'>
-        <Academic academicInfo={cvInfo.Academic} />
-        <Skills skillsData={cvInfo.skills} />
+        <Academic academicInfo={cvInfo?.Academic} />
+        <Skills skillsInfo={cvInfo?.skills} />
       </div>
       <div className='app-item'>
-        <Interest interestInfo={cvInfo.interest} />
-        <Languages languagesInfo={cvInfo.languages} />
+        <Interest interestInfo={cvInfo?.interest} />
+        <Languages languagesInfo={cvInfo?.languages} />
       </div>
     </div>
   );
