@@ -13,8 +13,10 @@ const App = () => {
   const [cvInfo, setCvInfo] = useState({});
 
   useEffect(() => {
-    getData('http://localhost:3000/data').then(data => setCvInfo(data));
-
+    getData('https://server-platzi-2hwhoct4l-cesargaleano.vercel.app/data').then(data => setCvInfo(data.data));
+    //getData('https://server-platzi-2hwhoct4l-cesargaleano.vercel.app/data').then(data => console.log(data));
+    
+    return (() => console.log(cvInfo));
   }, []);
 
   return (
