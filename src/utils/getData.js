@@ -1,7 +1,13 @@
-const getData = async (url) => {
 
-  const data = (await fetch(url)).json();
-  return data;
+async function getData(url) {
+  try {
+    const response = await fetch(url);
+    const data = await response.json();
+    return data;
+  } catch (error) {
+    console.error(error);
+    return null;
+  }
 };
 
 export default getData;
