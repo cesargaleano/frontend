@@ -1,41 +1,25 @@
 import React from 'react';
 import '../styles/components/Languages.styl';
 
-const languageData= [
-  {
-    name: 'Spanish',
-    percentage: '75%'
-  },
-  {
-    name: 'English',
-    percentage: '100%'
-  },
-];
-
-
-const LanguageItem = ({ languageData }) => {
-  console.log(languageData);
-  
+const LanguageItem = ({ languageItem = {} }) => {
+  console.log(languageItem);
+  const value = Number(languageItem?.percentage?.substr(0, languageItem.percentage.length - 1));
   return (
     <div className='Languages-item'>
-      <h4 className='Language-item-title'>{languageData.name}</h4>
-      <p>0%</p>
-      <input type='range' value={Number(languageData.percentage.substr(0,languageData.percentage.length-1))} />
-      <p>100%</p>
-      
-      
+      <h4 className='Language-item-title'>{`${languageItem?.name} : ${value}% `}</h4>
     </div>
   );
 };
 
-const Languages = () => {
+const Languages = ({ languagesInfo = [] }) => {
+  console.log(languagesInfo);
   return (
     <div className='Languages-container'>
-      <h4 className='Languages-title'>LANGUAGES</h4>
+      <h3 className='Languages-title'>LANGUAGES</h3>
       <div className='Languages-items'>
-        <LanguageItem languageData={languageData[0]} />
-        <LanguageItem languageData={languageData[1]} />
-        <LanguageItem languageData={languageData[1]} />
+        <LanguageItem languageItem={languagesInfo[0] ? languagesInfo[0] : []} />
+        <LanguageItem languageItem={languagesInfo[1] ? languagesInfo[1] : []} />
+        <LanguageItem languageItem={languagesInfo[1] ? languagesInfo[1] : []} />
       </div>
     </div>
   );
